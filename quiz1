@@ -1,0 +1,2 @@
+Cookies are long-term local or client-based files that contain user information while sessions are short-term global or server based files that contain user information, usually ends when a user closes his browser.
+Also cookies are not dependent on sessions, unlike sessions which are dependent on cookies.
