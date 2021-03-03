@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <html>
     
-    <h4>Welcome, <?php echo $_POST['username'] ?></h4>
+    <?php
+    if (isset($_POST['submitform'])) {
+        $username = $_POST['username'];
+        $name = $_POST['name'];
+        $date = $_POST['date'];
+        $email = $_POST['email'];
+        $password = ['password'];
+        
+        echo "<h2>Welcome, </h2>". $username. "<h2>.</h2> <h4> You have been successfully signed up.</h4>"."<br>";
+        echo "Your other details are as follows;"."<br>";
+        echo "Your name is: ". $name . "<br>";
+        echo "Your email is: ". $email . "<br>";
+        echo "Your Date of Birth is: ". $date . "<br>";
+        echo "Your password is: ". $password ."<br>";
+        
+    }
+    ?>
     
     
     <form action="forms.php" method="POST" accept-charset="utf-8">
@@ -28,6 +44,6 @@
             
         <input type="hidden" name="form_submitted" value="1"/><br /><br />
             
-        <input type="submit" value="Submit" style="background-color:cadetblue;"/>
+        <button type="submit" name="submitform">Submit</button>
     </form>
 </html>
